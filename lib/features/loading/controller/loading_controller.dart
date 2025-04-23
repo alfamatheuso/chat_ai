@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:chat_ai/core/services/local_service.dart';
 import 'package:mobx/mobx.dart';
 import 'package:process_run/process_run.dart';
 
@@ -19,9 +20,10 @@ class LoadingController {
     final isRepoExists = await repoDir.exists();
 
     if (!isRepoExists) {
-      await run('git', ['clone', repositoryUrl], workingDirectory: localPath);
+      await run('git clone $repositoryUrl', workingDirectory: localPath);
+      await run('git checkout -b branch-auxiliar', workingDirectory: repoPath);
     } else {
-      await run('git', ['pull'], workingDirectory: repoPath);
+      await run('git pull', workingDirectory: repoPath);
     }
   }
 }
