@@ -11,8 +11,19 @@ class LocalService {
   String? get owner => prefs.getString('owner');
   String? get repository => prefs.getString('repository');
 
+  Future<void> setPromptSuccess(bool value) async {
+    await prefs.setBool('prompt_success', value);
+  }
+
+  bool get promptSuccess => prefs.getBool('prompt_success') ?? false;
+
+  Future<void> setLocalPath(String path) async {
+    await prefs.setString('local_path', path);
+  }
+
+  String? get localPath => prefs.getString('local_path');
+
   Future<void> clearData() async {
-    await prefs.remove('owner');
-    await prefs.remove('repository');
+    await prefs.clear();
   }
 }
