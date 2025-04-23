@@ -1,3 +1,4 @@
+import 'package:chat_ai/features/terminal/model/terminal_model.dart';
 import 'package:mobx/mobx.dart';
 part 'terminal_controller.g.dart';
 

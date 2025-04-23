@@ -1,3 +1,7 @@
+import 'package:chat_ai/features/config/page/config_page.dart';
+import 'package:chat_ai/features/loading/page/loading_page.dart';
+import 'package:chat_ai/features/prompt_page/page/prompt_page.dart';
+import 'package:chat_ai/features/terminal/page/terminal_page.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {

@@ -1,4 +1,6 @@
+import 'package:chat_ai/features/loading/controller/loading_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class LoadingPage extends StatefulWidget {
   @override
@@ -12,7 +14,7 @@ class _LoadingPageState extends State<LoadingPage> {
   void initState() {
     super.initState();
     controller = Provider.of<LoadingController>(context, listen: false);
-    controller.executeClone().then((_) => Navigator.pushNamed(context, '/terminal'));
+    controller.executeCloneOrPull().then((_) => Navigator.pushNamed(context, '/terminal'));
   }
 
   @override

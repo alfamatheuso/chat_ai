@@ -1,5 +1,7 @@
+import 'package:chat_ai/features/config/controller/config_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:provider/provider.dart';
 
 class ConfigPage extends StatefulWidget {
   @override

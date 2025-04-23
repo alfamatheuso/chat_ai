@@ -1,3 +1,10 @@
+import 'dart:ui';
+
+import 'package:chat_ai/features/terminal/model/terminal_model.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:mobx/mobx.dart';
+
 class TerminalOutputWidget extends StatelessWidget {
   final ObservableList<TerminalLog> logs;
 

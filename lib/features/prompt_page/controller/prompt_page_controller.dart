@@ -1,3 +1,5 @@
+import 'package:chat_ai/core/services/api_service.dart';
+import 'package:chat_ai/core/services/local_service.dart';
 import 'package:mobx/mobx.dart';
 part 'prompt_page_controller.g.dart';
 

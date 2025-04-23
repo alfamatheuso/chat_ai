@@ -1,3 +1,7 @@
+import 'package:chat_ai/features/terminal/controller/terminal_controller.dart';
+import 'package:chat_ai/features/terminal/page/components/terminal_output_widget.dart';
+import 'package:flutter/material.dart';
+
 class TerminalPage extends StatelessWidget {
   final TerminalController controller = TerminalController();
 

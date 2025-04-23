@@ -1,3 +1,6 @@
+import 'package:chat_ai/core/config/constants.dart';
+import 'package:dio/dio.dart';
+
 class ApiService {
   final Dio dio = Dio();
 

@@ -1,4 +1,6 @@
+import 'package:chat_ai/features/prompt_page/controller/prompt_page_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class PromptPage extends StatelessWidget {
   final promptController = TextEditingController();

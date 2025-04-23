@@ -37,6 +37,7 @@ android/.idea/
 web/.dart_tool/
 web/.idea/
 web/.packages
+windows/
 
 # Arquivos do VS Code
 .vscode/
