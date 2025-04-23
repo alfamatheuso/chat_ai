@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:mobx/mobx.dart';
 import 'package:process_run/process_run.dart';
 
@@ -6,10 +7,21 @@ class LoadingController {
 
   LoadingController(this.localService);
 
-  Future<void> executeClone() async {
-    final repositoryUrl = 'https://github.com/${localService.owner}/${localService.repository}.git';
-    final directory = localService.localPath!;
+  Future<void> executeCloneOrPull() async {
+    final owner = localService.owner!;
+    final repository = localService.repository!;
+    final localPath = localService.localPath!;
+    final repoPath = '$localPath/$repository';
 
-    await run('git', ['clone', repositoryUrl], workingDirectory: directory);
+    final repositoryUrl = 'https://github.com/$owner/$repository.git';
+
+    final repoDir = Directory(repoPath);
+    final isRepoExists = await repoDir.exists();
+
+    if (!isRepoExists) {
+      await run('git', ['clone', repositoryUrl], workingDirectory: localPath);
+    } else {
+      await run('git', ['pull'], workingDirectory: repoPath);
+    }
   }
 }
