@@ -1,0 +1,53 @@
+# Flutter/Dart padrão
+.dart_tool/
+.packages
+.buildlog/
+.idea/
+.vscode/
+.flutter-plugins
+.flutter-plugins-dependencies
+.melos_tool/
+pubspec.lock
+build/
+coverage/
+generated_plugin_registrant.dart
+
+# Arquivos gerados
+*.g.dart
+
+# Ignorar Xcode (iOS)
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/App.framework
+ios/Flutter/Generated.xcconfig
+ios/Pods/
+ios/Runner.xcworkspace
+ios/.symlinks/
+ios/Flutter/ephemeral/
+
+# Ignorar Android
+android/.gradle/
+android/app/debug/
+android/app/profile/
+android/app/release/
+android/local.properties
+android/.idea/
+
+# Web
+web/.dart_tool/
+web/.idea/
+web/.packages
+
+# Arquivos do VS Code
+.vscode/
+
+# Arquivos do Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Outros
+*.log
+*.tmp
+*.swp
