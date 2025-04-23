@@ -39,4 +39,8 @@ abstract class _ConfigControllerBase with Store {
       await localService.saveOwnerAndRepo(selectedOwner!, repositoryName);
     }
   }
+
+  setLocalPath(String path) {
+    localService.setLocalPath(path);
+  }
 }
