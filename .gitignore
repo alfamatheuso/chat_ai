@@ -16,14 +16,7 @@ generated_plugin_registrant.dart
 *.g.dart
 
 # Ignorar Xcode (iOS)
-ios/Flutter/Flutter.framework
-ios/Flutter/Flutter.podspec
-ios/Flutter/App.framework
-ios/Flutter/Generated.xcconfig
-ios/Pods/
-ios/Runner.xcworkspace
-ios/.symlinks/
-ios/Flutter/ephemeral/
+ios/
 
 # Ignorar Android
 android/.gradle/
